@@ -3,152 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Грузоперевозки Хабаровск — Грузовоз 27 | от 1,5 до 5 тонн, грузчики, межгород</title>
-<meta name="description" content="Грузоперевозки по Хабаровску и краю: бортовые и будки 1,5–5 тонн от 1300 ₽/ч, грузчики 500 ₽/ч, межгород 60 ₽/км. Подача от 40 минут. ☎ +7 924 555-55-55">
+<title>Грузоперевозки Хабаровск — Грузовоз 27 | борт от 1000 ₽/ч, грузчики, межгород</title>
+<meta name="description" content="Грузоперевозки по Хабаровску и краю: бортовые и будки 1,5–5 тонн от 1000 ₽/ч, грузчики 500 ₽/ч, межгород 60 ₽/км. Подача от 40 минут. ☎ +7 914 777-11-27">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0d0f;--bg2:#141519;--card:#171c22;--card2:#1c1d22;--amber:#ff7a00;--amber2:#ff8c1f;--text:#eaeaea;--muted:#7a7c82;--line:rgba(255,122,0,0.18);--ease:cubic-bezier(.22,1,.36,1)}
+:root{
+  --dark:#101318;--dark2:#171b22;
+  --bg:#f5f6f8;--white:#ffffff;
+  --line:#e3e6ea;--line-d:rgba(255,122,0,.25);
+  --txt:#1a1d24;--muted:#5a6270;--desc:#3f4754;
+  --amber:#ff7a00;--amber2:#e86f00;
+  --wa:#128c4b;--tg:#229ED9;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;background-image:linear-gradient(rgba(255,122,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,122,0,0.03) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 85%)}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1001;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.mesh-bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 20% 30%,rgba(255,122,0,0.08) 0%,transparent 45%),radial-gradient(circle at 80% 80%,rgba(255,122,0,0.04) 0%,transparent 50%),var(--bg)}
-.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);will-change:transform}
-.cursor-dot{width:4px;height:4px;background:var(--amber);box-shadow:0 0 12px var(--amber)}
-.cursor-ring{width:40px;height:40px;border:1px solid rgba(255,122,0,0.5);transition:width .3s var(--ease),height .3s var(--ease),border-color .3s}
-.cursor-ring::before,.cursor-ring::after{content:'';position:absolute;background:var(--amber)}
-.cursor-ring::before{left:50%;top:-6px;width:1px;height:4px;transform:translateX(-50%)}
-.cursor-ring::after{top:50%;left:-6px;height:1px;width:4px;transform:translateY(-50%)}
-.cursor-ring.hover{width:70px;height:70px;border-color:var(--amber2)}
-h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:500;letter-spacing:-.02em}
+body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',sans-serif;font-weight:400;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-weight:600;letter-spacing:-.02em;line-height:1.12}
 .mono{font-family:'JetBrains Mono',monospace}
 .ember{color:var(--amber)}
-.container{max-width:1480px;margin:0 auto;padding:0 40px}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 40px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
-.nav.scrolled{padding:16px 40px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(12,13,15,.75);border-bottom:1px solid var(--line)}
-.logo{font-weight:600;font-size:18px;letter-spacing:.15em;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:12px}
-.logo-mark{width:28px;height:28px;border:1px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber)}
-.nav-links{display:flex;gap:40px;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s;cursor:none}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;padding:10px 20px;border:1px solid var(--line);transition:all .3s;cursor:none}
-.nav-cta:hover{background:var(--amber);color:var(--bg)}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:140px 40px 80px;position:relative}
-.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:60px;opacity:0;animation:fadeUp 1s .2s forwards;flex-wrap:wrap;gap:20px}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:flex;justify-content:space-between;align-items:center;transition:all .4s;background:rgba(16,19,24,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.nav.scrolled{padding:14px 32px;box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.logo{font-weight:700;font-size:18px;letter-spacing:.12em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:12px}
+.logo-mark{width:30px;height:30px;border:1px solid var(--amber);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{color:#b8bfc9;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;transition:color .3s}
+.nav-links a:hover{color:#fff}
+.nav-cta{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;color:#fff;text-decoration:none;padding:10px 20px;background:var(--amber);border-radius:8px;font-weight:600;transition:background .3s}
+.nav-cta:hover{background:var(--amber2)}
+/* HERO (тёмный, как шапка ДЛ) */
+.hero{background:var(--dark);color:#fff;padding:150px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 25%,rgba(255,122,0,.12) 0%,transparent 45%),radial-gradient(circle at 85% 75%,rgba(255,122,0,.07) 0%,transparent 50%)}
+.hero::after{content:'';position:absolute;inset:0;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px;flex-wrap:wrap;gap:16px;opacity:0;animation:fadeUp 1s .2s forwards}
 .hero-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;color:var(--amber);text-transform:uppercase;display:flex;align-items:center;gap:14px}
 .hero-tag::before{content:'';width:8px;height:8px;background:var(--amber);border-radius:50%;box-shadow:0 0 12px var(--amber);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero-coord{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.15em}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
-.hero-title{font-size:clamp(44px,7vw,116px);line-height:.92;margin-bottom:36px;letter-spacing:-.04em}
+.hero-coord{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8a93a0;letter-spacing:.15em}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero-title{font-size:clamp(40px,6vw,88px);line-height:.98;margin-bottom:30px;letter-spacing:-.03em;color:#fff}
 .hero-title .word{display:inline-block;overflow:hidden;vertical-align:top;margin-right:.18em}
 .hero-title .word span{display:inline-block;transform:translateY(110%);animation:wordReveal 1.2s var(--ease) forwards}
-.hero-title .outline{-webkit-text-stroke:1px var(--text);color:transparent;font-weight:600}
-.hero-sub{font-size:17px;color:var(--muted);max-width:600px;margin-bottom:44px;opacity:0;animation:fadeUp 1s 1.7s forwards}
-.hero-sub b{color:var(--text)}
-.hero-cta{display:flex;gap:16px;opacity:0;animation:fadeUp 1s 1.9s forwards;flex-wrap:wrap}
+.hero-sub{font-size:18px;color:#c3c9d2;max-width:620px;margin-bottom:40px;opacity:0;animation:fadeUp 1s 1.6s forwards;line-height:1.65}
+.hero-sub b{color:#fff}
+.hero-cta{display:flex;gap:14px;opacity:0;animation:fadeUp 1s 1.8s forwards;flex-wrap:wrap}
 .hero-photo{opacity:0;animation:fadeUp 1.2s .8s forwards;position:relative}
-.hero-photo img{width:100%;border-radius:16px;border:1px solid var(--line);filter:grayscale(20%) contrast(1.05);transition:filter .7s}
-.hero-photo:hover img{filter:grayscale(0%) contrast(1.08)}
-.hero-photo .ph-badge{position:absolute;bottom:16px;left:16px;background:rgba(12,13,15,.85);border:1px solid var(--line);border-radius:10px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--amber)}
-.btn{display:inline-flex;align-items:center;gap:14px;padding:20px 34px;background:transparent;border:1px solid var(--line);color:var(--text);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:none;transition:all .4s var(--ease);font-weight:500}
-.btn-primary{background:var(--amber);color:var(--bg);border-color:var(--amber)}
-.btn-primary:hover{background:var(--amber2);border-color:var(--amber2)}
+.hero-photo img{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,.12);filter:contrast(1.05)}
+.hero-photo .ph-badge{position:absolute;bottom:14px;left:14px;background:rgba(16,19,24,.9);border:1px solid var(--line-d);border-radius:8px;padding:9px 14px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--amber)}
+.hero-bottom{margin-top:70px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;opacity:0;animation:fadeUp 1s 2.1s forwards}
+.hero-stats{display:flex;gap:52px;flex-wrap:wrap}
+.hero-stat-num{font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--amber);font-weight:600}
+.hero-stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:#8a93a0;letter-spacing:.2em;text-transform:uppercase}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 28px;border-radius:10px;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;transition:all .35s var(--ease);border:0;cursor:pointer}
+.btn-primary{background:var(--amber);color:#fff}
+.btn-primary:hover{background:var(--amber2);transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,122,0,.35)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25)}
 .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
-.btn-wa{background:#128c4b;color:#fff;border-color:#128c4b}
-.btn-wa:hover{background:#16a85a;border-color:#16a85a;color:#fff}
-.btn-arrow{transition:transform .4s var(--ease);display:inline-block}
-.btn:hover .btn-arrow{transform:translateX(6px)}
-.hero-bottom{position:absolute;bottom:40px;left:40px;right:40px;display:flex;justify-content:space-between;align-items:flex-end;opacity:0;animation:fadeUp 1s 2.2s forwards;flex-wrap:wrap;gap:20px}
-.hero-stats{display:flex;gap:56px;flex-wrap:wrap}
-.hero-stat-num{font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--amber);font-weight:500}
-.hero-stat-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase}
-.scroll-ind{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;display:flex;align-items:center;gap:12px}
-.scroll-ind::after{content:'';width:1px;height:40px;background:linear-gradient(to bottom,var(--amber),transparent);animation:scrollPulse 2s ease-in-out infinite}
-@keyframes scrollPulse{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(.5);opacity:.4}}
-.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;background:var(--bg2)}
+.btn-ghost.dark{color:var(--txt);border-color:var(--line)}
+.btn-ghost.dark:hover{border-color:var(--amber);color:var(--amber)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#16a85a;transform:translateY(-2px)}
+.btn-max{background:linear-gradient(135deg,#4a7cf6,#7b5cf0);color:#fff}
+.btn-max:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(90,110,250,.35)}
+.btn-tg{background:var(--tg);color:#fff}
+.btn-tg:hover{background:#1b8ac0;transform:translateY(-2px)}
+.btn-arrow{transition:transform .35s var(--ease);display:inline-block}
+.btn:hover .btn-arrow{transform:translateX(5px)}
+/* MARQUEE */
+.marquee{overflow:hidden;background:var(--amber);padding:16px 0}
 .marquee-track{display:flex;width:max-content;animation:mar 28s linear infinite}
-.marquee span{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.2em;color:var(--muted);padding:0 26px;white-space:nowrap;text-transform:uppercase}
-.marquee span i{color:var(--amber);font-style:normal}
+.marquee span{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;color:#fff;padding:0 26px;white-space:nowrap;text-transform:uppercase;font-weight:600}
+.marquee span i{color:var(--dark);font-style:normal}
 @keyframes mar{to{transform:translateX(-50%)}}
-section{padding:140px 0;position:relative}
-.sec-head{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:start;margin-bottom:90px}
-.sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:14px;margin-top:8px}
+/* SECTIONS light */
+section{padding:100px 0;position:relative}
+.sec-head{margin-bottom:60px}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:14px;margin-bottom:16px;font-weight:600}
 .sec-label::before{content:'';width:32px;height:1px;background:var(--amber)}
-.sec-title{font-size:clamp(34px,5vw,72px);line-height:1.05;max-width:950px;letter-spacing:-.02em}
-.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.fleet-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:all .6s var(--ease);position:relative;background:transparent;cursor:none;overflow:hidden}
-.fleet-card::after{content:'';position:absolute;inset:0;border:1px solid transparent;transition:border-color .6s;pointer-events:none}
-.fleet-card:hover{z-index:2;background:var(--card)}
-.fleet-card:hover::after{border-color:var(--amber)}
-.fleet-card img{width:100%;height:240px;object-fit:cover;display:block;filter:grayscale(30%) contrast(1.05);transition:filter .7s,transform .7s var(--ease)}
-.fleet-card:hover img{filter:grayscale(0%) contrast(1.08);transform:scale(1.02)}
-.fleet-body{padding:32px}
+.sec-title{font-size:clamp(30px,4.4vw,56px);color:var(--txt);max-width:900px}
+.sec-sub{color:var(--muted);font-size:17px;max-width:700px;margin-top:14px}
+/* FLEET */
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.fleet-card{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:all .5s var(--ease);position:relative}
+.fleet-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(20,25,35,.12);border-color:var(--line-d)}
+.fleet-card img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.fleet-card:hover img{transform:scale(1.03)}
+.fleet-body{padding:30px}
 .fleet-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
-.fleet-name{font-size:26px;line-height:1.1}
-.fleet-price{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--amber);font-weight:600;white-space:nowrap}
-.fleet-desc{color:var(--muted);font-size:14px;margin-bottom:20px}
-.fleet-specs{display:flex;flex-direction:column;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;padding-top:16px;border-top:1px dashed var(--line)}
-.fleet-specs strong{color:var(--text);font-weight:400}
-.intercity{background:linear-gradient(135deg,var(--card) 0%,#1e1a14 100%);border:1px solid var(--line);border-radius:20px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative;overflow:hidden}
-.intercity::before{content:'';position:absolute;top:-60%;right:-20%;width:70%;height:200%;background:radial-gradient(circle,rgba(255,122,0,.1) 0%,transparent 55%);animation:pulse2 7s ease-in-out infinite}
+.fleet-name{font-size:23px;line-height:1.15;color:var(--txt)}
+.fleet-price{font-family:'JetBrains Mono',monospace;font-size:17px;color:var(--amber);font-weight:600;white-space:nowrap}
+.fleet-desc{color:var(--desc);font-size:15.5px;margin-bottom:20px;line-height:1.6}
+.fleet-specs{display:flex;flex-direction:column;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.06em;padding-top:16px;border-top:1px dashed var(--line)}
+.fleet-specs strong{color:var(--txt);font-weight:600}
+/* INTERCITY */
+.intercity{background:var(--dark);color:#fff;border-radius:18px;padding:56px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;position:relative;overflow:hidden}
+.intercity::before{content:'';position:absolute;top:-60%;right:-20%;width:70%;height:200%;background:radial-gradient(circle,rgba(255,122,0,.14) 0%,transparent 55%);animation:pulse2 7s ease-in-out infinite}
 @keyframes pulse2{0%,100%{opacity:.5}50%{opacity:1}}
 .intercity>*{position:relative}
-.intercity h3{font-size:clamp(26px,3vw,40px);margin-bottom:16px}
-.intercity p{color:var(--muted);max-width:560px}
+.intercity h3{font-size:clamp(26px,3vw,40px);margin-bottom:16px;color:#fff}
+.intercity p{color:#c3c9d2;font-size:16px;max-width:560px;line-height:1.65}
+.intercity .sec-label{color:var(--amber)}
 .intercity-price{text-align:center}
 .intercity-price .big{font-family:'JetBrains Mono',monospace;font-size:clamp(56px,7vw,104px);color:var(--amber);line-height:1;font-weight:600;letter-spacing:-.03em}
-.intercity-price .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:12px}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-left:1px solid var(--line);border-top:1px solid var(--line)}
-.why-card{padding:44px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s;cursor:none}
-.why-card:hover{background:var(--card2)}
-.why-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:.2em;margin-bottom:36px;display:block}
-.why-card h3{font-size:22px;margin-bottom:12px}
-.why-card p{color:var(--muted);font-size:14px}
+.intercity-price .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#8a93a0;margin-top:12px}
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:36px 30px;transition:all .4s}
+.why-card:hover{border-color:var(--line-d);transform:translateY(-4px);box-shadow:0 14px 36px rgba(20,25,35,.1)}
+.why-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:.2em;margin-bottom:28px;display:block;font-weight:600}
+.why-card h3{font-size:20px;margin-bottom:10px;color:var(--txt)}
+.why-card p{color:var(--desc);font-size:15px;line-height:1.6}
+/* STEPS */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.step{border-left:2px solid var(--line);padding-left:20px;position:relative;transition:border-color .4s}
-.step::before{content:'';position:absolute;left:-5px;top:2px;width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px var(--bg)}
-.step:hover{border-color:var(--amber)}
-.step b{display:block;margin-bottom:6px;font-size:1.05rem}
-.step span{color:var(--muted);font-size:.92rem}
+.step{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:12px;padding:28px 24px;transition:all .4s}
+.step:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(20,25,35,.1)}
+.step b{display:block;margin-bottom:8px;font-size:17px;color:var(--txt)}
+.step span{color:var(--desc);font-size:15px;line-height:1.55}
+/* WORK */
 .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.work-card{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);cursor:none}
-.work-card img{width:100%;height:340px;object-fit:cover;display:block;filter:grayscale(25%);transition:filter .7s,transform .7s var(--ease)}
-.work-card:hover img{filter:grayscale(0%);transform:scale(1.03)}
-.work-card .cap{position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(transparent,rgba(12,13,15,.9));font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text)}
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
-form{display:flex;flex-direction:column;gap:32px}
+.work-card{position:relative;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+.work-card img{width:100%;height:340px;object-fit:cover;display:block;transition:transform .7s var(--ease)}
+.work-card:hover img{transform:scale(1.03)}
+.work-card .cap{position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(transparent,rgba(16,19,24,.92));font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff}
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.contact-box{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:44px}
+form{display:flex;flex-direction:column;gap:22px}
 .form-field{position:relative}
-.form-field input,.form-field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);padding:20px 0;color:var(--text);font-family:inherit;font-size:16px;cursor:none;transition:border-color .4s}
+.form-field input,.form-field textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:17px 18px;color:var(--txt);font-family:inherit;font-size:16px;transition:border-color .3s}
 .form-field textarea{resize:vertical;min-height:100px}
-.form-field input:focus,.form-field textarea:focus{outline:none;border-bottom-color:var(--amber)}
-.form-field label{position:absolute;left:0;top:20px;color:var(--muted);font-size:14px;transition:all .4s var(--ease);pointer-events:none}
-.form-field input:focus~label,.form-field input:not(:placeholder-shown)~label,.form-field textarea:focus~label,.form-field textarea:not(:placeholder-shown)~label{top:-12px;font-size:10px;color:var(--amber);letter-spacing:.3em;text-transform:uppercase;font-family:'JetBrains Mono',monospace}
-.check{display:flex;gap:10px;color:var(--muted);font-size:.8rem;align-items:flex-start;cursor:none}
+.form-field input:focus,.form-field textarea:focus{outline:none;border-color:var(--amber)}
+.check{display:flex;gap:10px;color:var(--muted);font-size:.82rem;align-items:flex-start}
 .check input{width:17px;height:17px;accent-color:var(--amber);cursor:pointer;flex-shrink:0}
-.form-success{display:none;background:var(--card);border:1px solid var(--amber);border-radius:16px;padding:34px;text-align:center}
+.form-success{display:none;background:var(--white);border:1px solid var(--amber);border-radius:16px;padding:34px;text-align:center}
 .form-success.show{display:block;animation:fadeUp .6s var(--ease)}
 .form-success b{font-family:'JetBrains Mono',monospace;font-size:1.2rem;color:var(--amber);display:block;margin-bottom:8px}
-.contact-info{border-left:1px solid var(--line);padding-left:80px}
-.info-block{margin-bottom:44px}
-.info-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.contact-info{padding-left:0}
+.info-block{margin-bottom:34px}
+.info-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;display:flex;align-items:center;gap:10px;font-weight:600}
 .info-label::before{content:'>';color:var(--amber)}
-.info-value{font-size:20px;color:var(--text);line-height:1.4}
-.info-value a{color:var(--text);text-decoration:none;transition:color .3s}
+.info-value{font-size:21px;color:var(--txt);line-height:1.4;font-weight:600}
+.info-value a{color:var(--txt);text-decoration:none;transition:color .3s}
 .info-value a:hover{color:var(--amber)}
-.info-mono{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
-footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
-.foot-bottom{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--muted);flex-wrap:wrap;gap:16px;text-align:center}
-.foot-bottom a{color:inherit;text-decoration:underline;cursor:pointer}
+.info-mono{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);line-height:1.7}
+.mess{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+/* FOOTER dark как у ДЛ */
+footer{background:var(--dark);color:#8a93a0;padding:50px 0 36px;border-top:0}
+.foot-bottom{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;flex-wrap:wrap;gap:16px;text-align:center}
+.foot-bottom a{color:#c3c9d2;text-decoration:underline}
 .foot-bottom a:hover{color:var(--amber)}
-.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:250;background:rgba(12,13,15,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:10px 12px;gap:8px}
-.mobile-bar a{flex:1;padding:14px 6px;text-align:center;border-radius:10px;text-decoration:none;font-weight:600;font-size:.8rem;font-family:'JetBrains Mono',monospace;letter-spacing:.1em;color:#fff}
-.mobile-bar .m-call{background:var(--amber);color:var(--bg)}
-.mobile-bar .m-wa{background:#128c4b}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+/* MOBILE BAR */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:250;background:rgba(16,19,24,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line-d);padding:10px 10px;gap:7px}
+.mobile-bar a{flex:1;padding:13px 4px;text-align:center;border-radius:9px;text-decoration:none;font-weight:600;font-size:.72rem;font-family:'JetBrains Mono',monospace;letter-spacing:.06em;color:#fff}
+.mobile-bar .m-call{background:var(--amber)}
+.mobile-bar .m-wa{background:var(--wa)}
+.mobile-bar .m-max{background:linear-gradient(135deg,#4a7cf6,#7b5cf0)}
+.mobile-bar .m-tg{background:var(--tg)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 @keyframes wordReveal{to{transform:translateY(0)}}
@@ -156,49 +174,39 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
 @media(max-width:1100px){
   .fleet-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr 1fr}
-  .steps{grid-template-columns:1fr 1fr;gap:36px}
-  .sec-head{grid-template-columns:1fr;gap:24px}
-  .contact-wrap{grid-template-columns:1fr;gap:80px}
-  .contact-info{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:60px}
+  .steps{grid-template-columns:1fr 1fr;gap:20px}
+  .contact-wrap{grid-template-columns:1fr;gap:50px}
   .intercity{grid-template-columns:1fr;padding:40px 28px}
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .nav-links{display:none}
 }
 @media(max-width:768px){
-  body{cursor:auto}
-  .cursor-dot,.cursor-ring{display:none!important}
-  .btn,.fleet-card,.why-card,.work-card,a,input,textarea{cursor:pointer}
-  .form-field input,.form-field textarea{cursor:text}
   .fleet-grid,.why-grid,.steps,.work-grid{grid-template-columns:1fr}
-  .container{padding:0 24px}
-  section{padding:100px 0}
-  .hero{padding:110px 24px 60px}
-  .nav{padding:20px 24px}
-  .hero-bottom{left:24px;right:24px;bottom:24px}
+  .container{padding:0 20px}
+  section{padding:70px 0}
+  .hero{padding:120px 0 60px}
+  .nav{padding:16px 20px}
   .mobile-bar{display:flex}
-  body{padding-bottom:70px}
+  body{padding-bottom:66px}
+  .contact-box{padding:30px 22px}
 }
 </style>
 </head>
 <body>
-<div class="mesh-bg"></div>
-<div class="cursor-dot" id="cDot"></div>
-<div class="cursor-ring" id="cRing"></div>
 
 <nav class="nav" id="nav">
   <a href="#" class="logo"><span class="logo-mark">27</span><span>ГРУЗОВОЗ·27</span></a>
   <ul class="nav-links">
-    <li><a href="#fleet" data-hover>Тарифы</a></li>
-    <li><a href="#intercity" data-hover>Межгород</a></li>
-    <li><a href="#work" data-hover>Работы</a></li>
-    <li><a href="#contact" data-hover>Контакты</a></li>
+    <li><a href="#fleet">Тарифы</a></li>
+    <li><a href="#intercity">Межгород</a></li>
+    <li><a href="#work">Работы</a></li>
+    <li><a href="#contact">Контакты</a></li>
   </ul>
-  <!-- ЗАМЕНИ 79245555555 на номер клиента -->
-  <a href="tel:+79245555555" class="nav-cta" data-hover>+7 924 555-55-55</a>
+  <a href="tel:+79147771127" class="nav-cta">+7 914 777-11-27</a>
 </nav>
 
 <section class="hero">
-  <div class="container" style="padding:0">
+  <div class="container">
     <div class="hero-top">
       <div class="hero-tag">Хабаровск · Хабаровский край</div>
       <div class="hero-coord">48.4802° N · 135.0719° E</div>
@@ -207,16 +215,17 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
       <div>
         <h1 class="hero-title">
           <span class="word"><span style="animation-delay:.4s">Грузо&shy;перевозки</span></span><br>
-          <span class="word outline"><span style="animation-delay:.7s">по</span></span>
-          <span class="word"><span style="animation-delay:.85s">Хабаровску</span></span><br>
-          <span class="word"><span class="ember" style="animation-delay:1.15s">и краю.</span></span>
+          <span class="word"><span style="animation-delay:.7s">по Хабаровску</span></span><br>
+          <span class="word"><span class="ember" style="animation-delay:1s">и краю.</span></span>
         </h1>
-        <p class="hero-sub">Бортовые, будки и тент <b>1,5–5 тонн</b>. Грузчики, манипулятор, самосвал. Подача от 40 минут, цена фиксируется до выезда. <b>Минимальный заказ — 2 часа.</b></p>
+        <p class="hero-sub">Бортовые, будки и тент <b>1,5–5 тонн</b> — от 1000 ₽/час. Грузчики, манипулятор, самосвал. Подача от 40 минут, цена фиксируется до выезда. <b>Минимальный заказ — 2 часа.</b></p>
         <div class="hero-cta">
-          <!-- ЗАМЕНИ 79245555555 на номер клиента -->
-          <a href="tel:+79245555555" class="btn btn-primary" data-hover>Позвонить <span class="btn-arrow">→</span></a>
-          <a href="https://wa.me/79245555555" target="_blank" class="btn btn-wa" data-hover>WhatsApp</a>
-          <a href="#fleet" class="btn btn-ghost" data-hover>Тарифы</a>
+          <a href="tel:+79147771127" class="btn btn-primary">Позвонить <span class="btn-arrow">→</span></a>
+          <a href="https://wa.me/79147771127" target="_blank" class="btn btn-wa">WhatsApp</a>
+          <!-- TODO: вставить ссылку Игоря на MAX -->
+          <a href="#" class="btn btn-max">MAX</a>
+          <!-- TODO: вставить ссылку Игоря на Telegram -->
+          <a href="#" class="btn btn-tg">Telegram</a>
         </div>
       </div>
       <div class="hero-photo">
@@ -224,14 +233,13 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
         <div class="ph-badge">СВОЙ АВТОПАРК · 1,5–5 Т</div>
       </div>
     </div>
-  </div>
-  <div class="hero-bottom">
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">от 40 мин</div><div class="hero-stat-label">Подача по городу</div></div>
-      <div><div class="hero-stat-num">1,5–5 т</div><div class="hero-stat-label">Грузоподъёмность</div></div>
-      <div><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Приём заявок</div></div>
+    <div class="hero-bottom">
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">от 40 мин</div><div class="hero-stat-label">Подача по городу</div></div>
+        <div><div class="hero-stat-num">от 1000 ₽/ч</div><div class="hero-stat-label">Борт 1,5 тонны</div></div>
+        <div><div class="hero-stat-num">24/7</div><div class="hero-stat-label">Приём заявок</div></div>
+      </div>
     </div>
-    <div class="scroll-ind">Scroll ↓</div>
   </div>
 </section>
 
@@ -243,55 +251,56 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
 <section id="fleet">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="sec-label">01 · ТАРИФЫ</div>
-      <h2 class="sec-title">Техника и цены — <span class="ember">без сюрпризов</span></h2>
+      <div class="sec-label">01 · Тарифы</div>
+      <h2 class="sec-title">Техника и цены — без сюрпризов</h2>
+      <p class="sec-sub">Цена называется по телефону до выезда и не меняется по факту. Минимальный заказ любой машины и грузчиков — 2 часа.</p>
     </div>
     <div class="fleet-grid">
-      <div class="fleet-card reveal d1" data-hover>
+      <div class="fleet-card reveal d1">
         <img loading="lazy" src="g5.jpg" alt="Бортовой грузовик 1,5 тонны, борт 3 метра — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
-          <div class="fleet-top"><h3 class="fleet-name">Борт · 1,5 тонны</h3><div class="fleet-price">1 300 ₽/ч</div></div>
-          <p class="fleet-desc">Будка, тент или открытый борт 3 метра. Переезды, мебель, стройматериалы, малогабаритные грузы.</p>
-          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>борт</strong> — 3 м</span></div>
+          <div class="fleet-top"><h3 class="fleet-name">Борт · 1,5 тонны</h3><div class="fleet-price">от 1 000 ₽/ч</div></div>
+          <p class="fleet-desc">Открытый борт 3 метра — от 1000 ₽/час. Будка или тент — 1300 ₽/час. Переезды, мебель, стройматериалы, малогабаритные грузы.</p>
+          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>борт</strong> — 3 метра</span></div>
         </div>
       </div>
-      <div class="fleet-card reveal d2" data-hover>
+      <div class="fleet-card reveal d2">
         <img loading="lazy" src="g2.jpg" alt="Фургон 3 тонны с боковой загрузкой — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
           <div class="fleet-top"><h3 class="fleet-name">Будка / тент · 3 тонны</h3><div class="fleet-price">1 500 ₽/ч</div></div>
-          <p class="fleet-desc">Загрузка сбоку, сзади и сверху. Коммерческие грузы, паллеты, оборудование, продукты.</p>
-          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>загрузка</strong> — 3 стороны</span></div>
+          <p class="fleet-desc">Загрузка сбоку, сзади и сверху. Коммерческие грузы, паллеты, оборудование, продукты — всё под крышей.</p>
+          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>загрузка</strong> — с 3 сторон</span></div>
         </div>
       </div>
-      <div class="fleet-card reveal d3" data-hover>
+      <div class="fleet-card reveal d3">
         <img loading="lazy" src="g4.jpg" alt="Фургон 5 тонн с гидролифтом — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
           <div class="fleet-top"><h3 class="fleet-name">Фургон · 5 тонн</h3><div class="fleet-price">1 800 ₽/ч</div></div>
-          <p class="fleet-desc">Гидролифт-платформа для тяжёлых грузов без пандуса. Крупные переезды, партии товара, станки.</p>
+          <p class="fleet-desc">Гидролифт-платформа поднимает тяжёлый груз без пандуса и грузчиков. Крупные переезды, партии товара, станки.</p>
           <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>гидролифт</strong> — в комплекте</span></div>
         </div>
       </div>
-      <div class="fleet-card reveal d1" data-hover>
+      <div class="fleet-card reveal d1">
         <img loading="lazy" src="g1.jpg" alt="Грузчики в фирменной форме — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
           <div class="fleet-top"><h3 class="fleet-name">Грузчики</h3><div class="fleet-price">500 ₽/ч</div></div>
-          <p class="fleet-desc">Аккуратная погрузка и разгрузка, подъём на этаж, такелаж. Работают в паре с любой машиной.</p>
-          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>за человека</strong></span></div>
+          <p class="fleet-desc">Аккуратная погрузка и разгрузка, подъём на этаж, такелаж. Работают в паре с любой машиной из парка.</p>
+          <div class="fleet-specs"><span><strong>минимум</strong> — 2 часа</span><span><strong>цена</strong> — за человека</span></div>
         </div>
       </div>
-      <div class="fleet-card reveal d2" data-hover>
+      <div class="fleet-card reveal d2">
         <img loading="lazy" src="g6.jpg" alt="Грузовик с манипулятором — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
           <div class="fleet-top"><h3 class="fleet-name">Манипулятор</h3><div class="fleet-price">по запросу</div></div>
-          <p class="fleet-desc">Кран-борт для тяжёлых и негабаритных грузов: бытовки, гаражи, станки, сейфы, спецтехника.</p>
-          <div class="fleet-specs"><span><strong>кран</strong> + борт в одной машине</span></div>
+          <p class="fleet-desc">Кран-борт для тяжёлых и негабаритных грузов: бытовки, гаражи, станки, сейфы, спецтехника. Погрузим и привезём одной машиной.</p>
+          <div class="fleet-specs"><span><strong>кран + борт</strong> — в одной машине</span></div>
         </div>
       </div>
-      <div class="fleet-card reveal d3" data-hover>
+      <div class="fleet-card reveal d3">
         <img loading="lazy" src="g8.jpg" alt="Самосвал со щебнем — Хабаровск" onerror="this.style.display='none'">
         <div class="fleet-body">
           <div class="fleet-top"><h3 class="fleet-name">Самосвал</h3><div class="fleet-price">по запросу</div></div>
-          <p class="fleet-desc">Песок, щебень, грунт, вывоз мусора и снега. Доставка на объект с точной разгрузкой.</p>
+          <p class="fleet-desc">Песок, щебень, грунт, вывоз мусора и снега. Привозим на объект и разгружаем точно в нужную точку.</p>
           <div class="fleet-specs"><span><strong>сыпучие</strong> · вывоз грунта</span></div>
         </div>
       </div>
@@ -303,8 +312,8 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
   <div class="container">
     <div class="intercity reveal">
       <div>
-        <div class="sec-label" style="margin-bottom:18px">02 · МЕЖГОРОД</div>
-        <h3>Межгород по всему <span class="ember">Хабаровскому краю</span></h3>
+        <div class="sec-label" style="margin-bottom:18px">02 · Межгород</div>
+        <h3>Межгород по всему Хабаровскому краю</h3>
         <p>Комсомольск-на-Амуре, Амурск, Солнечный, Вяземский, Бикин и любые направления края и соседних регионов. Оплата по километражу — считаем честно, в обе стороны не накручиваем. Водитель знает трассы, грузим и разгружаем в точке.</p>
       </div>
       <div class="intercity-price">
@@ -315,17 +324,17 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<section>
+<section style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="sec-label">03 · ПОЧЕМУ МЫ</div>
-      <h2 class="sec-title">Работаем так, как <span class="ember">ждали бы сами</span></h2>
+      <div class="sec-label">03 · Почему мы</div>
+      <h2 class="sec-title">Работаем так, как ждали бы сами</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal d1" data-hover><span class="why-num">— 01</span><h3>Подача от 40 минут</h3><p>Машины стоят по городу — приезжаем быстро, даже если нужно «ещё сегодня».</p></div>
-      <div class="why-card reveal d2" data-hover><span class="why-num">— 02</span><h3>Цена до выезда</h3><p>Называем стоимость по телефону и фиксируем. По факту не «всплывает» ничего.</p></div>
-      <div class="why-card reveal d3" data-hover><span class="why-num">— 03</span><h3>Аккуратная бригада</h3><p>Ремни, пледы, упаковка. Мебель и техника доезжают без царапин и сколов.</p></div>
-      <div class="why-card reveal d4" data-hover><span class="why-num">— 04</span><h3>Оплата по факту</h3><p>Наличные, перевод, безнал для юрлиц. Платите когда груз доставлен.</p></div>
+      <div class="why-card reveal d1"><span class="why-num">— 01</span><h3>Подача от 40 минут</h3><p>Машины стоят по городу — приезжаем быстро, даже если нужно «ещё сегодня».</p></div>
+      <div class="why-card reveal d2"><span class="why-num">— 02</span><h3>Цена до выезда</h3><p>Называем стоимость по телефону и фиксируем. По факту не «всплывает» ничего.</p></div>
+      <div class="why-card reveal d3"><span class="why-num">— 03</span><h3>Аккуратная бригада</h3><p>Ремни, пледы, упаковка. Мебель и техника доезжают без царапин и сколов.</p></div>
+      <div class="why-card reveal d4"><span class="why-num">— 04</span><h3>Оплата по факту</h3><p>Наличные, перевод, безнал для юрлиц. Платите когда груз доставлен.</p></div>
     </div>
   </div>
 </section>
@@ -333,15 +342,15 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
 <section id="work">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="sec-label">04 · НА ОБЪЕКТАХ</div>
-      <h2 class="sec-title">Реальные рейсы, <span class="ember">реальные грузы</span></h2>
+      <div class="sec-label">04 · На объектах</div>
+      <h2 class="sec-title">Реальные рейсы, реальные грузы</h2>
     </div>
     <div class="work-grid">
-      <div class="work-card reveal d1" data-hover>
+      <div class="work-card reveal d1">
         <img loading="lazy" src="g7.jpg" alt="Доставка кирпича бортовым грузовиком — Хабаровск" onerror="this.style.display='none'">
         <div class="cap">Стройматериалы · доставка на объект</div>
       </div>
-      <div class="work-card reveal d2" data-hover>
+      <div class="work-card reveal d2">
         <img loading="lazy" src="g3.jpg" alt="Бортовой грузовик на погрузке — Хабаровск" onerror="this.style.display='none'">
         <div class="cap">Борт 1,5 т · погрузка у склада</div>
       </div>
@@ -349,45 +358,50 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<section>
+<section style="background:var(--white);border-top:1px solid var(--line)">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="sec-label">05 · ПРОЦЕСС</div>
-      <h2 class="sec-title">Четыре шага — <span class="ember">и груз на месте</span></h2>
+      <div class="sec-label">05 · Процесс</div>
+      <h2 class="sec-title">Четыре шага — и груз на месте</h2>
     </div>
     <div class="steps">
-      <div class="step reveal d1"><b>01 · Заявка</b><span>Звонок или WhatsApp. Говорите, что везём и откуда-куда.</span></div>
-      <div class="step reveal d2"><b>02 · Расчёт</b><span>Называем цену и время подачи. Фиксируем.</span></div>
+      <div class="step reveal d1"><b>01 · Заявка</b><span>Звонок, WhatsApp, MAX или Telegram. Говорите, что везём и откуда-куда.</span></div>
+      <div class="step reveal d2"><b>02 · Расчёт</b><span>Называем цену и время подачи. Фиксируем до выезда.</span></div>
       <div class="step reveal d3"><b>03 · Погрузка</b><span>Машина и грузчики на месте. Ремни, аккуратность.</span></div>
       <div class="step reveal d4"><b>04 · Доставка</b><span>Разгрузка в точке, оплата по факту.</span></div>
     </div>
   </div>
 </section>
 
-<section id="contact" style="background:var(--bg2);border-top:1px solid var(--line)">
+<section id="contact">
   <div class="container">
     <div class="sec-head reveal">
-      <div class="sec-label">06 · ЗАКАЗАТЬ</div>
-      <h2 class="sec-title">Машина будет <span class="ember">уже сегодня</span></h2>
+      <div class="sec-label">06 · Заказать</div>
+      <h2 class="sec-title">Машина будет уже сегодня</h2>
     </div>
     <div class="contact-wrap">
-      <div class="reveal">
+      <div class="contact-box reveal">
         <!-- TODO: создать Formspree и вставить ID -->
         <form id="lead-form" novalidate>
-          <div class="form-field"><input type="text" id="name" placeholder=" " required data-hover><label for="name">Ваше имя</label></div>
-          <div class="form-field"><input type="tel" id="phone" placeholder=" " required data-hover><label for="phone">Телефон</label></div>
-          <div class="form-field"><textarea id="msg" placeholder=" " data-hover></textarea><label for="msg">Что везём? Откуда и куда?</label></div>
+          <div class="form-field"><input type="text" id="name" placeholder="Ваше имя" required></div>
+          <div class="form-field"><input type="tel" id="phone" placeholder="Телефон" required></div>
+          <div class="form-field"><textarea id="msg" placeholder="Что везём? Откуда и куда?"></textarea></div>
           <label class="check"><input type="checkbox" required> Согласен на обработку персональных данных (152-ФЗ)</label>
-          <button type="submit" class="btn btn-primary" data-hover style="align-self:flex-start">Отправить заявку <span class="btn-arrow">→</span></button>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start">Отправить заявку <span class="btn-arrow">→</span></button>
         </form>
         <div class="form-success" id="ok"><b>Заявка принята!</b><p style="color:var(--muted)">Перезвоним в течение 10 минут.</p></div>
       </div>
       <div class="contact-info reveal d2">
         <div class="info-block">
           <div class="info-label">Диспетчер 24/7</div>
-          <!-- ЗАМЕНИ 79245555555 на номер клиента -->
-          <div class="info-value"><a href="tel:+79245555555" data-hover>+7 924 555-55-55</a></div>
-          <div class="info-mono">Звонок и WhatsApp</div>
+          <div class="info-value"><a href="tel:+79147771127">+7 914 777-11-27</a></div>
+          <div class="mess">
+            <a href="https://wa.me/79147771127" target="_blank" class="btn btn-wa">WhatsApp</a>
+            <!-- TODO: вставить ссылку Игоря на MAX -->
+            <a href="#" class="btn btn-max">MAX</a>
+            <!-- TODO: вставить ссылку Игоря на Telegram -->
+            <a href="#" class="btn btn-tg">Telegram</a>
+          </div>
         </div>
         <div class="info-block">
           <div class="info-label">География</div>
@@ -401,7 +415,7 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
         </div>
         <div class="info-block">
           <div class="info-label">Тарифы</div>
-          <div class="info-mono">1,5 т — 1 300 ₽/ч · 3 т — 1 500 ₽/ч · 5 т — 1 800 ₽/ч<br>Грузчики — 500 ₽/ч · минимум 2 часа</div>
+          <div class="info-mono">Борт 1,5 т — от 1000 ₽/ч · будка/тент 1,5 т — 1300 ₽/ч<br>3 т — 1500 ₽/ч · 5 т — 1800 ₽/ч · грузчики — 500 ₽/ч<br>Минимум — 2 часа</div>
         </div>
       </div>
     </div>
@@ -409,42 +423,25 @@ footer{padding:70px 40px 40px;border-top:1px solid var(--line)}
 </section>
 
 <footer>
-  <div class="foot-bottom">
-    <span>ГРУЗОВОЗ·27 · Хабаровск · © 2026</span>
-    <span>Информация не является публичной офертой</span>
-    <a onclick="document.getElementById('pol').style.display='block';return false">Политика обработки персональных данных (152-ФЗ)</a>
+  <div class="container">
+    <div class="foot-bottom">
+      <span>ГРУЗОВОЗ·27 · Хабаровск · © 2026</span>
+      <span>Информация не является публичной офертой</span>
+      <a href="policy.html" target="_blank">Политика обработки персональных данных (152-ФЗ)</a>
+    </div>
   </div>
 </footer>
 
 <div class="mobile-bar">
-  <!-- ЗАМЕНИ 79245555555 на номер клиента -->
-  <a href="tel:+79245555555" class="m-call">📞 ПОЗВОНИТЬ</a>
-  <a href="https://wa.me/79245555555" target="_blank" class="m-wa">WHATSAPP</a>
-</div>
-
-<!-- Политика 152-ФЗ -->
-<div id="pol" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.75);padding:20px;overflow:auto" onclick="if(event.target===this)this.style.display='none'">
-  <div style="max-width:720px;margin:40px auto;background:#171c22;border:1px solid rgba(255,122,0,.3);border-radius:16px;padding:36px;color:#eaeaea;font-size:14px;line-height:1.7">
-    <h3 style="font-size:20px;margin-bottom:16px">Политика обработки персональных данных</h3>
-    <p>Настоящая политика действует в отношении персональных данных, которые сайт получает через формы обратной связи (имя, номер телефона, содержание сообщения).</p>
-    <p style="margin-top:12px">Данные обрабатываются в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» исключительно для связи с заявителем и расчёта стоимости услуг.</p>
-    <p style="margin-top:12px">Отправляя форму, вы даёте согласие на обработку персональных данных. Данные не передаются третьим лицам, за исключением случаев, предусмотренных законодательством РФ.</p>
-    <p style="margin-top:12px">Согласие отзывается по телефону +7 924 555-55-55.</p>
-    <button onclick="document.getElementById('pol').style.display='none'" style="margin-top:24px;padding:12px 26px;background:#ff7a00;border:0;border-radius:10px;font-weight:600;cursor:pointer;color:#0c0d0f">Закрыть</button>
-  </div>
+  <a href="tel:+79147771127" class="m-call">📞 ЗВОНОК</a>
+  <a href="https://wa.me/79147771127" target="_blank" class="m-wa">WHATSAPP</a>
+  <!-- TODO: ссылки MAX и TG -->
+  <a href="#" class="m-max">MAX</a>
+  <a href="#" class="m-tg">TELEGRAM</a>
 </div>
 
 <script>
 (function(){
-  var dot=document.getElementById('cDot'),ring=document.getElementById('cRing'),mx=0,my=0,rx=0,ry=0;
-  if(window.matchMedia('(pointer:fine)').matches){
-    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;dot.style.transform='translate('+mx+'px,'+my+'px) translate(-50%,-50%)'});
-    (function loop(){rx+=(mx-rx)*.18;ry+=(my-ry)*.18;ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';requestAnimationFrame(loop)})();
-    document.querySelectorAll('[data-hover],a,button').forEach(function(el){
-      el.addEventListener('mouseenter',function(){ring.classList.add('hover')});
-      el.addEventListener('mouseleave',function(){ring.classList.remove('hover')});
-    });
-  }
   window.addEventListener('scroll',function(){
     document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
   });
